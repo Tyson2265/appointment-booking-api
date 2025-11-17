@@ -1,0 +1,261 @@
+:root{
+  --accent-blue:#0ea5e9;
+  --capitec-red:linear-gradient(90deg,#e21b1b,#ff6a6a);
+  --card-bg:#ffffff;
+  --muted:#6b7280;
+  --radius:12px;
+  --shadow: 0 6px 18px rgba(15,23,42,0.08);
+}
+
+/* --------------------------
+   HERO / AUTH CARD
+   -------------------------- */
+
+.auth-hero{
+  background: linear-gradient(90deg,#c62828,#ff7a00);
+  color: #fff;
+  padding: 28px 60px;
+  border-radius: 14px;
+  text-align: center;
+  margin-bottom: 18px;
+  box-shadow: var(--shadow);
+}
+.auth-hero h2{
+  font-size: 2.4rem;
+  margin: 4px 0;
+  font-weight: 700;
+  letter-spacing: -.02em;
+}
+.auth-hero p{
+  margin: 0;
+  opacity: .95;
+  color: rgba(255,255,255,0.92);
+}
+
+/* center card */
+.auth-card{
+  max-width: 420px;
+  margin: 0 auto;
+  background: var(--card-bg);
+  padding: 18px;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* form elements */
+.auth-input{
+  width:100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #e6e9ee;
+  margin-bottom: 12px;
+  font-size: 15px;
+  outline: none;
+  box-sizing: border-box;
+}
+.auth-input:focus{
+  border-color: var(--accent-blue);
+  box-shadow: 0 4px 12px rgba(14,165,233,0.08);
+}
+
+/* buttons */
+.auth-primary{
+  display:block;
+  width:100%;
+  padding: 12px;
+  border-radius: 10px;
+  background: var(--accent-blue);
+  color: white;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+.auth-secondary{
+  display:block;
+  width:100%;
+  padding: 10px;
+  margin-top:8px;
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid rgba(14,165,233,0.12);
+  color: var(--accent-blue);
+  cursor:pointer;
+  text-align:center;
+}
+
+/* small helpers */
+.auth-note{
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 10px;
+  text-align:center;
+}
+.auth-success{
+  background: #ecfdf5;
+  color: #065f46;
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  text-align:center;
+}
+.auth-links{
+  display:flex;
+  justify-content:space-between;
+  gap:8px;
+  margin-top:8px;
+  font-size: 14px;
+}
+.auth-links a{
+  color: var(--muted);
+  text-decoration: none;
+}
+
+/* branches / listing card */
+.list-card{
+  background: var(--card-bg);
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.branch-item{
+  padding: 12px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(250,250,250,0.9), rgba(245,245,245,0.9));
+  border: 1px solid #eef2f6;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.branch-name{
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.branch-address{
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.branch-phone{
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* make hero slightly taller on md screens */
+@media (min-width: 768px) {
+  .auth-hero { padding: 28px; }
+}
+
+/* --------------------------
+   PAGE LAYOUT: Branches centering
+   Scoped, won't override other pages
+   -------------------------- */
+
+/* top-level wrapper for branches page (apply to root element of page) */
+.branches-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--page-bg, #fafafa);
+  color: var(--text-color, #111);
+}
+
+/* optional lightweight top nav (use only if you don't have an app-wide nav) */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  gap: 1rem;
+  background: transparent;
+  z-index: 20;
+}
+.top-nav .brand {
+  color: var(--accent-blue);
+  font-weight: 600;
+}
+.top-nav .nav-actions {
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+.top-nav button {
+  margin-left: 0.5rem;
+  background: #ef6c00;
+  border: none;
+  cursor: pointer;
+  font-weight: bolder;
+  padding: 6px 8px;
+  border-radius: 8px;
+}
+.top-nav .nav-actions .logout-btn   {
+  background: #fff;
+  color: #ef6c00;
+  border-radius: 6px;
+  padding: 6px 10px;
+  box-shadow: 0 1px 3px #fff;
+}
+
+/* main centering container used on Branches page */
+.branches-container {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;      /* vertical centering */
+  justify-content: center;  /* horizontal centering */
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* inner constrained width so hero + list-card have breathing room */
+.branches-inner {
+  width: 100%;
+  max-width: 980px; /* adjust as needed */
+  margin: 0 auto;
+}
+
+/* preserve your two-column look on md+ screens */
+@media (min-width: 768px) {
+  .branches-inner .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .auth-hero {
+    text-align: left;
+    padding: 3rem 2.5rem;
+    border-radius: 14px;
+  }
+
+  .list-card {
+    padding: 1.25rem;
+  }
+}
+
+/* small screens: stack and reduce padding */
+@media (max-width: 767px) {
+  .auth-hero {
+    padding: 20px;
+    border-radius: 12px;
+  }
+  .branches-container { padding: 1rem; }
+  .branches-inner { padding: 0 0.5rem; }
+}
+
+/* small UX polish for branch items */
+.branch-item {
+  transition: box-shadow .15s ease, transform .12s ease;
+}
+.branch-item:hover {
+  box-shadow: 0 10px 30px rgba(15,23,42,0.06);
+  transform: translateY(-2px);
+}

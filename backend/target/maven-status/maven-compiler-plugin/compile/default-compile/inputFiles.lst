@@ -1,0 +1,14 @@
+C:\Users\sipho\OneDrive\Desktop\appointment-booking-api\src\main\java\com\capitec\booking\dto\SlotResponseDTO.java
+C:\Users\sipho\OneDrive\Desktop\appointment-booking-api\src\main\java\com\capitec\booking\controller\AppointmentController.java
+C:\Users\sipho\OneDrive\Desktop\appointment-booking-api\src\main\java\com\capitec\booking\repository\AppointmentRepository.java
+C:\Users\sipho\OneDrive\Desktop\appointment-booking-api\src\main\java\com\capitec\booking\repository\SlotRepository.java
+C:\Users\sipho\OneDrive\Desktop\appointment-booking-api\src\main\java\com\capitec\booking\repository\BranchRepository.java
+C:\Users\sipho\OneDrive\Desktop\appointment-booking-api\src\main\java\com\capitec\booking\dto\BookingRequestDTO.java
+C:\Users\sipho\OneDrive\Desktop\appointment-booking-api\src\main\java\com\capitec\booking\exception\SlotUnavailableException.java
+C:\Users\sipho\OneDrive\Desktop\appointment-booking-api\src\main\java\com\capitec\booking\service\BookingService.java
+C:\Users\sipho\OneDrive\Desktop\appointment-booking-api\src\main\java\com\capitec\booking\entity\Appointment.java
+C:\Users\sipho\OneDrive\Desktop\appointment-booking-api\src\main\java\com\capitec\booking\entity\Branch.java
+C:\Users\sipho\OneDrive\Desktop\appointment-booking-api\src\main\java\com\capitec\booking\entity\Slot.java
+C:\Users\sipho\OneDrive\Desktop\appointment-booking-api\src\main\java\com\capitec\booking\Application.java
+C:\Users\sipho\OneDrive\Desktop\appointment-booking-api\src\main\java\com\capitec\booking\exception\ResourceNotFoundException.java
+C:\Users\sipho\OneDrive\Desktop\appointment-booking-api\src\main\java\com\capitec\booking\dto\AppointmentResponseDTO.java

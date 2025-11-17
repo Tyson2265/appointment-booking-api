@@ -1,0 +1,14 @@
+com\capitec\booking\exception\ResourceNotFoundException.class
+com\capitec\booking\exception\SlotUnavailableException.class
+com\capitec\booking\Application.class
+com\capitec\booking\dto\SlotResponseDTO.class
+com\capitec\booking\entity\Branch.class
+com\capitec\booking\repository\BranchRepository.class
+com\capitec\booking\entity\Appointment.class
+com\capitec\booking\repository\SlotRepository.class
+com\capitec\booking\dto\BookingRequestDTO.class
+com\capitec\booking\service\BookingService.class
+com\capitec\booking\dto\AppointmentResponseDTO.class
+com\capitec\booking\controller\AppointmentController.class
+com\capitec\booking\entity\Slot.class
+com\capitec\booking\repository\AppointmentRepository.class

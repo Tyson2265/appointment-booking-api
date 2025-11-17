@@ -1,0 +1,57 @@
+# --- Spring Boot Configuration (Single File, Multi-Profile YAML) ---
+# This file uses YAML's multi-document feature to define configurations 
+# for different Spring profiles within a single file.
+
+# =================================================================
+# DEFAULT PROFILE (Used when running INSIDE Docker)
+# =================================================================
+spring:
+  application:
+    name: appointment-booking-api
+
+  # 1. Configuration for internal Docker network connection
+  datasource:
+    url: jdbc:postgresql://postgres:5432/capitec_db
+    driver-class-name: org.postgresql.Driver
+    username: capitec_user
+    password: secure_password
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    # 'create' is for clean setup (e.g., when building a Docker image)
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+
+  sql:
+    init:
+      mode: always
+      platform: postgresql
+
+# --- Separation boundary for the 'local' profile ---
+---
+
+# =================================================================
+# 'LOCAL' PROFILE (Used when running on the HOST MACHINE via Maven)
+# =================================================================
+spring:
+  config:
+    # This block only becomes active when '-Dspring-boot.run.profiles=local' is set
+    activate:
+      on-profile: local
+
+  # 2. Configuration for host machine connection (overrides defaults above)
+  # Hostname is 'localhost' and port is '5433' (the exposed host port)
+  datasource:
+    # changed: connect to host Postgres exposed on port 5433 and use capitec_db / capitec_user
+    url: jdbc:postgresql://localhost:5433/capitec_db
+    username: capitec_user
+    password: secure_password
+
+  jpa:
+    hibernate:
+      # Using 'update' for local development to avoid dropping data on every restart
+      ddl-auto: update
+  server:
+    port: 8081
+
