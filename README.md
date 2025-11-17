@@ -43,7 +43,7 @@ Before running the app locally, make sure you have:
 
 ```bash
 #  Clone the repository
-git clone https://github.com/Tyson2265/Apponintment-Booking-API
+git clone https://github.com/Tyson2265/apponintment-booking-api
 
 
 # Backend setup (USE Docker)
@@ -53,12 +53,8 @@ docker-compose up --build
 #  The API will be available at:
 
 http://localhost:8080
-
-PostgreSQL at localhost:5432
-# Backend setup (without Docker)
-cd backend
-mvn clean install
-mvn spring-boot:run
+PostgreSQL at http://localhost:5432
+ 
 
 # Frontend setup (Run Local Development)
 
